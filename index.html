@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Télécharger l'Application</title>
+    <title>Télécharger StreamCODE - APK</title>
     <!-- Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
@@ -114,6 +114,10 @@
             margin-bottom: 1.5rem;
         }
 
+        .hero-badge i {
+            margin-right: 0.4rem;
+        }
+
         .hero h2 {
             font-size: 3rem;
             font-weight: 800;
@@ -180,7 +184,7 @@
         }
 
         .btn-download i {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
 
         .btn-download .platform {
@@ -281,7 +285,7 @@
             line-height: 1.5;
         }
 
-        /* ----- INSTRUCTIONS ----- */
+        /* ----- INSTRUCTIONS (spécifiques APK) ----- */
         .instructions {
             background: #ffffff;
             border-radius: 16px;
@@ -413,29 +417,6 @@
                 padding: 0.75rem 1.5rem;
             }
         }
-
-        /* ----- ANIMATION DE CHARGEMENT (petit clin d'œil) ----- */
-        .pulse-dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background: #22c55e;
-            border-radius: 50%;
-            margin-right: 0.5rem;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.5;
-                transform: scale(0.8);
-            }
-        }
     </style>
 </head>
 <body>
@@ -443,8 +424,8 @@
     <!-- ========== HEADER ========== -->
     <header>
         <div class="logo">
-            <i class="fas fa-cube"></i>
-            <h1>App<span>Hub</span></h1>
+            <i class="fas fa-code"></i>
+            <h1>Stream<span>CODE</span></h1>
         </div>
         <nav>
             <a href="#features"><i class="fas fa-star"></i> Fonctionnalités</a>
@@ -457,155 +438,145 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">
-                <i class="fas fa-rocket" style="margin-right: 0.4rem;"></i>
-                Dernière version disponible
+                <i class="fab fa-android"></i> APK Android disponible
             </div>
 
             <h2>
-                Téléchargez <span>l'application</span><br />
-                en un clic
+                Téléchargez <span>StreamCODE</span><br />
+                sur votre mobile
             </h2>
 
             <p>
-                Récupérez la dernière version de l'application directement depuis
-                GitHub. Simple, rapide et sécurisé.
+                Installez l'application directement en téléchargeant le fichier APK.
+                Profitez de toutes les fonctionnalités en avant-première.
             </p>
 
-            <!-- BOUTONS DE TÉLÉCHARGEMENT -->
+            <!-- BOUTONS DE TÉLÉCHARGEMENT AVEC VOS LIENS -->
             <div class="download-buttons" id="download">
-                <!-- Bouton principal : lien vers la release GitHub -->
-                <a href="https://github.com/votre-utilisateur/votre-repo/releases/latest"
-                class="btn-download primary"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-download"></i>
-                <span class="platform">
-                    Télécharger
-                    <small>Dernière version stable</small>
-                </span>
+                <!-- Bouton principal : LIEN DIRECT VERS VOTRE APK -->
+                <a href="https://github.com/KaiZen1404/StreamCODE/releases/download/v1.0/app-release.apk"
+                   class="btn-download primary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="fab fa-android"></i>
+                    <span class="platform">
+                        Télécharger l'APK
+                        <small>Android • v1.0</small>
+                    </span>
+                </a>
+
+                <!-- Bouton secondaire : lien vers votre dépôt GitHub -->
+                <a href="https://github.com/KaiZen1404/StreamCODE"
+                   class="btn-download secondary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                    <span class="platform">
+                        Voir sur GitHub
+                        <small>Code source &amp; releases</small>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Version & infos mises à jour -->
+            <div class="version-info">
+                <i class="fas fa-tag"></i>
+                Version <strong>v1.0</strong> &middot;
+                <i class="fas fa-file"></i> APK &middot;
+                <a href="https://github.com/KaiZen1404/StreamCODE/releases" target="_blank">
+                    Voir toutes les versions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FONCTIONNALITÉS ========== -->
+    <section class="section" id="features">
+        <div class="container">
+            <h2 class="section-title">Pourquoi StreamCODE ?</h2>
+            <p class="section-subtitle">
+                L'application qui simplifie votre expérience.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Ultra-rapide</h3>
+                    <p>Optimisée pour des performances maximales sur tous les appareils Android.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Fiable</h3>
+                    <p>Application open source, vérifiée et régulièrement mise à jour.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Mises à jour</h3>
+                    <p>Bénéficiez des dernières fonctionnalités et correctifs en continu.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Communauté</h3>
+                    <p>Rejoignez une communauté active et contribuez au projet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INSTRUCTIONS POUR L'APK ========== -->
+    <section class="section" id="help" style="background: #f1f5f9;">
+        <div class="container">
+            <h2 class="section-title">Comment installer l'APK ?</h2>
+            <p class="section-subtitle">
+                Suivez ces étapes simples pour installer StreamCODE sur votre smartphone.
+            </p>
+
+            <div class="instructions">
+                <ol>
+                    <li>
+                        <strong>Téléchargez le fichier</strong> : Cliquez sur le bouton <strong>« Télécharger l'APK »</strong> ci-dessus.
+                    </li>
+                    <li>
+                        <strong>Autorisez les sources inconnues</strong> : Si un message s'affiche, rendez-vous dans les <strong>Paramètres</strong> de votre téléphone &gt; <strong>Sécurité</strong> (ou <strong>Applications</strong>) et activez <strong>« Installer depuis des sources inconnues »</strong> pour votre navigateur ou gestionnaire de fichiers.
+                    </li>
+                    <li>
+                        <strong>Ouvrez le fichier</strong> : Une fois le téléchargement terminé, ouvrez le fichier <code>app-release.apk</code> depuis vos notifications ou votre dossier de téléchargements.
+                    </li>
+                    <li>
+                        <strong>Installez</strong> : Appuyez sur <strong>« Installer »</strong>, puis sur <strong>« Ouvrir »</strong> pour lancer l'application.
+                    </li>
+                </ol>
+
+                <div class="note">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>Sécurité :</strong> Cette APK provient directement de notre dépôt GitHub officiel. Si vous avez des doutes, vous pouvez toujours consulter le code source ou ouvrir une <a href="https://github.com/KaiZen1404/StreamCODE/issues" target="_blank">issue</a> sur GitHub.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <p>
+            <i class="fas fa-code"></i> avec <i class="fas fa-heart" style="color: #ef4444;"></i>
+            par <a href="https://github.com/KaiZen1404" target="_blank">KaiZen1404</a>
+            &middot; Hébergé sur <a href="https://github.com/KaiZen1404/StreamCODE" target="_blank">GitHub</a>
+        </p>
+        <p style="font-size: 0.85rem; margin-top: 0.3rem;">
+            &copy; 2026 — Tous droits réservés
+        </p>
+        <div class="socials">
+            <a href="https://github.com/KaiZen1404/StreamCODE" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
             </a>
-
-            <!-- Bouton secondaire : lien vers le dépôt -->
-            <a href="https://github.com/votre-utilisateur/votre-repo"
-            class="btn-download secondary"
-            target="_blank"
-            rel="noopener noreferrer">
-            <i class="fab fa-github"></i>
-            <span class="platform">
-                Voir sur GitHub
-                <small>Code source &amp; releases</small>
-            </span>
-        </a>
-    </div>
-
-    <!-- Version & infos -->
-    <div class="version-info">
-        <i class="fas fa-tag"></i>
-        Version <strong>v2.3.0</strong> &middot;
-        <i class="fas fa-calendar-alt"></i> 15 juin 2026 &middot;
-        <a href="https://github.com/votre-utilisateur/votre-repo/releases" target="_blank">
-            Toutes les versions
-        </a>
-    </div>
-</div>
-</section>
-
-<!-- ========== FONCTIONNALITÉS ========== -->
-<section class="section" id="features">
-    <div class="container">
-        <h2 class="section-title">Pourquoi cette application ?</h2>
-        <p class="section-subtitle">
-            Conçue pour être légère, rapide et efficace.
-        </p>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <i class="fas fa-bolt"></i>
-                <h3>Ultra-rapide</h3>
-                <p>Optimisée pour des performances maximales sur toutes les configurations.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Sécurisée</h3>
-                <p>Code open source, audité et signé pour garantir votre sécurité.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-sync-alt"></i>
-                <h3>Mises à jour</h3>
-                <p>Bénéficiez des dernières fonctionnalités et correctifs en continu.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-users"></i>
-                <h3>Communauté</h3>
-                <p>Rejoignez une communauté active et contribuez au projet.</p>
-            </div>
+            <a href="#" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="Discord">
+                <i class="fab fa-discord"></i>
+            </a>
         </div>
-    </div>
-</section>
-
-<!-- ========== INSTRUCTIONS ========== -->
-<section class="section" id="help" style="background: #f1f5f9;">
-    <div class="container">
-        <h2 class="section-title">Comment installer ?</h2>
-        <p class="section-subtitle">
-            Suivez ces étapes simples pour démarrer.
-        </p>
-
-        <div class="instructions">
-            <ol>
-                <li>
-                    Cliquez sur le bouton <strong>« Télécharger »</strong> ci-dessus.
-                    Vous serez redirigé vers la page des <strong>releases GitHub</strong>.
-                </li>
-                <li>
-                    Téléchargez le fichier correspondant à votre système :
-                    <code>.exe</code> pour Windows, <code>.dmg</code> pour macOS,
-                    ou <code>.AppImage</code> pour Linux.
-                </li>
-                <li>
-                    Une fois le fichier téléchargé, ouvrez-le et suivez les
-                    instructions d'installation.
-                </li>
-                <li>
-                    Lancez l'application et profitez-en !
-                </li>
-            </ol>
-
-            <div class="note">
-                <i class="fas fa-info-circle"></i>
-                <strong>Astuce :</strong> Si vous rencontrez des problèmes,
-                consultez le
-                <a href="https://github.com/votre-utilisateur/votre-repo/wiki" target="_blank">wiki</a>
-                ou ouvrez une
-                <a href="https://github.com/votre-utilisateur/votre-repo/issues" target="_blank">issue</a>
-                sur GitHub.
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== FOOTER ========== -->
-<footer>
-    <p>
-        <i class="fas fa-code"></i> avec <i class="fas fa-heart" style="color: #ef4444;"></i>
-        par <a href="https://github.com/votre-utilisateur" target="_blank">votre-utilisateur</a>
-        &middot; Hébergé sur <a href="https://github.com/votre-utilisateur/votre-repo" target="_blank">GitHub</a>
-    </p>
-    <p style="font-size: 0.85rem; margin-top: 0.3rem;">
-        &copy; 2026 — Tous droits réservés
-    </p>
-    <div class="socials">
-        <a href="https://github.com/votre-utilisateur/votre-repo" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="#" target="_blank" aria-label="Twitter">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" target="_blank" aria-label="Discord">
-            <i class="fab fa-discord"></i>
-        </a>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
