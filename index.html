@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Télécharger StreamCODE - APK</title>
+    <title>Télécharger StreamCODE - Multi-plateforme + TV</title>
     <!-- Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
@@ -76,7 +76,7 @@
         .hero {
             background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
             color: #ffffff;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem 4rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -95,7 +95,7 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
@@ -119,7 +119,7 @@
         }
 
         .hero h2 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 1rem;
@@ -130,100 +130,64 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: #94a3b8;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto 2rem;
             line-height: 1.6;
         }
 
-        /* ----- BOUTONS DE TÉLÉCHARGEMENT ----- */
-        .download-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .btn-download {
+        /* Bouton dynamique principal */
+        .btn-download-hero {
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
-            padding: 0.9rem 2.2rem;
+            padding: 0.9rem 2.5rem;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             text-decoration: none;
             transition: all 0.25s ease;
+            background: #38bdf8;
+            color: #0f172a;
+            box-shadow: 0 8px 24px rgba(56, 189, 248, 0.35);
             border: none;
             cursor: pointer;
         }
 
-        .btn-download.primary {
-            background: #38bdf8;
-            color: #0f172a;
-            box-shadow: 0 8px 24px rgba(56, 189, 248, 0.35);
-        }
-
-        .btn-download.primary:hover {
+        .btn-download-hero:hover {
             background: #7dd3fc;
             transform: translateY(-3px);
             box-shadow: 0 12px 32px rgba(56, 189, 248, 0.45);
         }
 
-        .btn-download.secondary {
-            background: rgba(255, 255, 255, 0.08);
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(4px);
+        .btn-download-hero i {
+            font-size: 1.3rem;
         }
 
-        .btn-download.secondary:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-        }
-
-        .btn-download i {
-            font-size: 1.4rem;
-        }
-
-        .btn-download .platform {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            line-height: 1.2;
-        }
-
-        .btn-download .platform small {
-            font-weight: 400;
-            font-size: 0.7rem;
-            opacity: 0.8;
-        }
-
-        /* ----- VERSION INFO ----- */
-        .version-info {
-            margin-top: 2rem;
+        .hero .version-info {
+            margin-top: 1.5rem;
             font-size: 0.9rem;
             color: #64748b;
         }
 
-        .version-info i {
+        .hero .version-info i {
             color: #38bdf8;
             margin-right: 0.4rem;
         }
 
-        .version-info a {
+        .hero .version-info a {
             color: #38bdf8;
             text-decoration: none;
         }
 
-        .version-info a:hover {
+        .hero .version-info a:hover {
             text-decoration: underline;
         }
 
-        /* ----- SECTIONS ----- */
+        /* ----- SECTIONS GÉNÉRALES ----- */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
@@ -246,85 +210,157 @@
             font-size: 1.1rem;
         }
 
-        /* ----- FONCTIONNALITÉS ----- */
-        .features-grid {
+        /* ----- GRILLE DES PLATEFORMES (CARTES) ----- */
+        .platforms-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
         }
 
-        .feature-card {
+        .platform-card {
             background: #ffffff;
-            padding: 2rem 1.5rem;
-            border-radius: 16px;
+            padding: 1.8rem 1rem 1.5rem;
+            border-radius: 20px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-            border: 1px solid #e2e8f0;
+            border: 2px solid #e2e8f0;
             text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .feature-card:hover {
+        .platform-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
         }
 
-        .feature-card i {
-            font-size: 2.5rem;
-            color: #38bdf8;
-            margin-bottom: 1rem;
+        .platform-card.recommended {
+            border-color: #38bdf8;
+            background: #f0f9ff;
         }
 
-        .feature-card h3 {
-            font-size: 1.2rem;
+        .platform-card .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #22c55e;
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 8px rgba(34, 197, 94, 0.3);
+            display: none;
+        }
+
+        .platform-card.recommended .badge {
+            display: block;
+        }
+
+        .platform-card .os-icon {
+            font-size: 2.8rem;
             margin-bottom: 0.5rem;
+            color: #0f172a;
         }
 
-        .feature-card p {
+        .platform-card .os-icon.android { color: #3DDC84; }
+        .platform-card .os-icon.ios { color: #555555; }
+        .platform-card .os-icon.windows { color: #0078D4; }
+        .platform-card .os-icon.mac { color: #000000; }
+        .platform-card .os-icon.linux { color: #FCC624; }
+        .platform-card .os-icon.tv { color: #e50914; } /* rouge Netflix-like */
+
+        .platform-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .platform-card p {
+            font-size: 0.8rem;
             color: #64748b;
-            font-size: 0.95rem;
-            line-height: 1.5;
+            margin-bottom: 1rem;
+            flex-grow: 1;
         }
 
-        /* ----- INSTRUCTIONS (spécifiques APK) ----- */
-        .instructions {
+        .btn-platform {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            background: #e2e8f0;
+            color: #1e293b;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn-platform.primary-btn {
+            background: #0f172a;
+            color: #ffffff;
+        }
+
+        .btn-platform.primary-btn:hover {
+            background: #1e293b;
+            transform: scale(1.02);
+        }
+
+        .btn-platform.outline-btn {
+            background: transparent;
+            border: 1.5px solid #cbd5e1;
+        }
+
+        .btn-platform.outline-btn:hover {
+            border-color: #94a3b8;
+            background: #f1f5f9;
+        }
+
+        .btn-platform i {
+            font-size: 0.9rem;
+        }
+
+        /* ----- INSTRUCTIONS (ACCORDÉON / TABS) ----- */
+        .instructions-wrapper {
             background: #ffffff;
             border-radius: 16px;
             border: 1px solid #e2e8f0;
             padding: 2.5rem;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .instructions ol {
-            padding-left: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .instructions ol li {
-            margin-bottom: 0.8rem;
-            line-height: 1.6;
-        }
-
-        .instructions ol li code {
-            background: #f1f5f9;
-            padding: 0.2rem 0.6rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            color: #0f172a;
-        }
-
-        .instructions .note {
+        .instructions-wrapper .note {
             background: #f1f5f9;
             padding: 1rem 1.5rem;
             border-radius: 10px;
             color: #475569;
             font-size: 0.95rem;
             border-left: 4px solid #38bdf8;
+            margin-top: 1.5rem;
         }
 
-        .instructions .note i {
+        .instructions-wrapper .note i {
             color: #38bdf8;
             margin-right: 0.5rem;
+        }
+
+        .instructions-wrapper .note a {
+            color: #0f172a;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .instructions-wrapper .note a:hover {
+            text-decoration: underline;
         }
 
         /* ----- FOOTER ----- */
@@ -383,38 +419,41 @@
                 font-size: 1rem;
             }
 
-            .download-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn-download {
-                width: 100%;
-                max-width: 320px;
-                justify-content: center;
+            .platforms-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
             }
 
             .section {
                 padding: 2.5rem 0;
             }
-
-            .instructions {
-                padding: 1.5rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 550px) {
             .hero h2 {
                 font-size: 1.8rem;
             }
 
-            .btn-download {
-                font-size: 0.95rem;
-                padding: 0.75rem 1.5rem;
+            .platforms-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+            }
+
+            .platform-card {
+                padding: 1rem 0.5rem;
+            }
+
+            .platform-card .os-icon {
+                font-size: 2rem;
+            }
+
+            .btn-platform {
+                font-size: 0.7rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .instructions-wrapper {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -428,128 +467,145 @@
             <h1>Stream<span>CODE</span></h1>
         </div>
         <nav>
-            <a href="#features"><i class="fas fa-star"></i> Fonctionnalités</a>
-            <a href="#download"><i class="fas fa-download"></i> Télécharger</a>
+            <a href="#platforms"><i class="fas fa-download"></i> Télécharger</a>
             <a href="#help"><i class="fas fa-question-circle"></i> Aide</a>
+            <a href="https://github.com/KaiZen1404/StreamCODE" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </nav>
     </header>
 
-    <!-- ========== HERO ========== -->
+    <!-- ========== HERO (avec bouton dynamique) ========== -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">
-                <i class="fab fa-android"></i> APK Android disponible
+                <i class="fas fa-rocket"></i> Compatible multi-plateforme
             </div>
 
             <h2>
-                Téléchargez <span>StreamCODE</span><br />
-                sur votre mobile
+                <span>StreamCODE</span> sur tous vos appareils
             </h2>
 
             <p>
-                Installez l'application directement en téléchargeant le fichier APK.
-                Profitez de toutes les fonctionnalités en avant-première.
+                Choisissez votre plateforme ci-dessous ou laissez-nous vous suggérer
+                la version adaptée à votre appareil.
             </p>
 
-            <!-- BOUTONS DE TÉLÉCHARGEMENT AVEC VOS LIENS -->
-            <div class="download-buttons" id="download">
-                <!-- Bouton principal : LIEN DIRECT VERS VOTRE APK -->
-                <a href="https://github.com/KaiZen1404/StreamCODE/releases/download/v1.0/app-release.apk"
-                   class="btn-download primary"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <i class="fab fa-android"></i>
-                    <span class="platform">
-                        Télécharger l'APK
-                        <small>Android • v1.0</small>
-                    </span>
-                </a>
+            <!-- Bouton principal dynamique (JavaScript le modifie) -->
+            <a href="#" id="dynamicDownloadBtn" class="btn-download-hero" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-download"></i>
+                <span id="dynamicBtnText">Télécharger pour votre appareil</span>
+            </a>
 
-                <!-- Bouton secondaire : lien vers votre dépôt GitHub -->
-                <a href="https://github.com/KaiZen1404/StreamCODE"
-                   class="btn-download secondary"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                    <span class="platform">
-                        Voir sur GitHub
-                        <small>Code source &amp; releases</small>
-                    </span>
-                </a>
-            </div>
-
-            <!-- Version & infos mises à jour -->
             <div class="version-info">
                 <i class="fas fa-tag"></i>
-                Version <strong>v1.0</strong> &middot;
-                <i class="fas fa-file"></i> APK &middot;
-                <a href="https://github.com/KaiZen1404/StreamCODE/releases" target="_blank">
-                    Voir toutes les versions
-                </a>
+                Dernière version : <strong>v1.0</strong> &middot;
+                <i class="fas fa-code-branch"></i>
+                <a href="https://github.com/KaiZen1404/StreamCODE/releases" target="_blank">Toutes les releases</a>
             </div>
         </div>
     </section>
 
-    <!-- ========== FONCTIONNALITÉS ========== -->
-    <section class="section" id="features">
+    <!-- ========== SECTION PLATEFORMES ========== -->
+    <section class="section" id="platforms">
         <div class="container">
-            <h2 class="section-title">Pourquoi StreamCODE ?</h2>
+            <h2 class="section-title">Téléchargez pour votre OS</h2>
             <p class="section-subtitle">
-                L'application qui simplifie votre expérience.
+                Cliquez sur la carte correspondant à votre appareil.
+                <span style="display: inline-block; background: #dcfce7; color: #15803d; padding: 0.1rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-left: 0.5rem;">
+                    <i class="fas fa-check-circle"></i> Recommandé détecté
+                </span>
             </p>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Ultra-rapide</h3>
-                    <p>Optimisée pour des performances maximales sur tous les appareils Android.</p>
+            <div class="platforms-grid" id="platformGrid">
+                <!-- ANDROID -->
+                <div class="platform-card" data-os="android">
+                    <span class="badge">Recommandé</span>
+                    <div class="os-icon android"><i class="fab fa-android"></i></div>
+                    <h3>Android</h3>
+                    <p>APK direct pour mobiles et tablettes</p>
+                    <a href="https://github.com/KaiZen1404/StreamCODE/releases/download/v1.0/app-release.apk" class="btn-platform primary-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-download"></i> Télécharger .apk
+                    </a>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Fiable</h3>
-                    <p>Application open source, vérifiée et régulièrement mise à jour.</p>
+
+                <!-- WINDOWS -->
+                <div class="platform-card" data-os="windows">
+                    <span class="badge">Recommandé</span>
+                    <div class="os-icon windows"><i class="fab fa-windows"></i></div>
+                    <h3>Windows</h3>
+                    <p>PC / Ordinateur de bureau</p>
+                    <a href="https://github.com/KaiZen1404/StreamCODE/releases" class="btn-platform outline-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Voir sur GitHub
+                    </a>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-sync-alt"></i>
-                    <h3>Mises à jour</h3>
-                    <p>Bénéficiez des dernières fonctionnalités et correctifs en continu.</p>
+
+                <!-- macOS -->
+                <div class="platform-card" data-os="mac">
+                    <span class="badge">Recommandé</span>
+                    <div class="os-icon mac"><i class="fab fa-apple"></i></div>
+                    <h3>macOS</h3>
+                    <p>Mac / Ordinateur Apple</p>
+                    <a href="https://github.com/KaiZen1404/StreamCODE/releases" class="btn-platform outline-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Voir sur GitHub
+                    </a>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Communauté</h3>
-                    <p>Rejoignez une communauté active et contribuez au projet.</p>
+
+                <!-- LINUX -->
+                <div class="platform-card" data-os="linux">
+                    <span class="badge">Recommandé</span>
+                    <div class="os-icon linux"><i class="fab fa-linux"></i></div>
+                    <h3>Linux</h3>
+                    <p>Distributions (AppImage / DEB)</p>
+                    <a href="https://github.com/KaiZen1404/StreamCODE/releases" class="btn-platform outline-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Voir sur GitHub
+                    </a>
+                </div>
+
+                <!-- iOS (iPhone/iPad) -->
+                <div class="platform-card" data-os="ios">
+                    <span class="badge">Recommandé</span>
+                    <div class="os-icon ios"><i class="fab fa-apple"></i></div>
+                    <h3>iPhone / iPad</h3>
+                    <p>Application iOS (bientôt disponible)</p>
+                    <a href="https://github.com/KaiZen1404/StreamCODE" class="btn-platform outline-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Suivre le projet
+                    </a>
+                </div>
+
+                <!-- TV (Android TV / Apple TV / Smart TV) -->
+                <div class="platform-card" data-os="tv">
+                    <span class="badge">Recommandé</span>
+                    <div class="os-icon tv"><i class="fas fa-tv"></i></div>
+                    <h3>Télévision</h3>
+                    <p>Android TV, Apple TV, Smart TV</p>
+                    <a href="https://github.com/KaiZen1404/StreamCODE/releases" class="btn-platform outline-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Voir les versions TV
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== INSTRUCTIONS POUR L'APK ========== -->
+    <!-- ========== SECTION AIDE / INSTRUCTIONS ========== -->
     <section class="section" id="help" style="background: #f1f5f9;">
         <div class="container">
-            <h2 class="section-title">Comment installer l'APK ?</h2>
+            <h2 class="section-title">Comment installer ?</h2>
             <p class="section-subtitle">
-                Suivez ces étapes simples pour installer StreamCODE sur votre smartphone.
+                Des instructions simples pour chaque plateforme.
             </p>
 
-            <div class="instructions">
-                <ol>
-                    <li>
-                        <strong>Téléchargez le fichier</strong> : Cliquez sur le bouton <strong>« Télécharger l'APK »</strong> ci-dessus.
-                    </li>
-                    <li>
-                        <strong>Autorisez les sources inconnues</strong> : Si un message s'affiche, rendez-vous dans les <strong>Paramètres</strong> de votre téléphone &gt; <strong>Sécurité</strong> (ou <strong>Applications</strong>) et activez <strong>« Installer depuis des sources inconnues »</strong> pour votre navigateur ou gestionnaire de fichiers.
-                    </li>
-                    <li>
-                        <strong>Ouvrez le fichier</strong> : Une fois le téléchargement terminé, ouvrez le fichier <code>app-release.apk</code> depuis vos notifications ou votre dossier de téléchargements.
-                    </li>
-                    <li>
-                        <strong>Installez</strong> : Appuyez sur <strong>« Installer »</strong>, puis sur <strong>« Ouvrir »</strong> pour lancer l'application.
-                    </li>
-                </ol>
+            <div class="instructions-wrapper">
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 1.5rem;">
+                    <span style="background: #0f172a; color: #fff; padding: 0.2rem 1rem; border-radius: 30px; font-size: 0.8rem;"><i class="fab fa-android"></i> Android : ouvrez l'APK et autorisez l'installation</span>
+                    <span style="background: #0f172a; color: #fff; padding: 0.2rem 1rem; border-radius: 30px; font-size: 0.8rem;"><i class="fab fa-windows"></i> Windows : exécutez l'installateur .exe</span>
+                    <span style="background: #0f172a; color: #fff; padding: 0.2rem 1rem; border-radius: 30px; font-size: 0.8rem;"><i class="fab fa-apple"></i> macOS : ouvrez le .dmg et glissez dans Applications</span>
+                    <span style="background: #0f172a; color: #fff; padding: 0.2rem 1rem; border-radius: 30px; font-size: 0.8rem;"><i class="fab fa-linux"></i> Linux : rendez le .AppImage exécutable</span>
+                    <span style="background: #0f172a; color: #fff; padding: 0.2rem 1rem; border-radius: 30px; font-size: 0.8rem;"><i class="fas fa-tv"></i> TV : installez via le store ou sideload</span>
+                </div>
 
                 <div class="note">
                     <i class="fas fa-info-circle"></i>
-                    <strong>Sécurité :</strong> Cette APK provient directement de notre dépôt GitHub officiel. Si vous avez des doutes, vous pouvez toujours consulter le code source ou ouvrir une <a href="https://github.com/KaiZen1404/StreamCODE/issues" target="_blank">issue</a> sur GitHub.
+                    <strong>Vous ne trouvez pas votre version ?</strong>
+                    Rendez-vous sur la page <a href="https://github.com/KaiZen1404/StreamCODE/releases" target="_blank">Releases GitHub</a> pour accéder à tous les fichiers disponibles. Si votre plateforme n'est pas encore prise en charge, vous pouvez <a href="https://github.com/KaiZen1404/StreamCODE/issues" target="_blank">ouvrir une issue</a> pour suivre l'avancement.
                 </div>
             </div>
         </div>
@@ -577,6 +633,98 @@
             </a>
         </div>
     </footer>
+
+    <!-- ========== JAVASCRIPT : DÉTECTION OS & DYNAMISATION ========== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Détection du système d'exploitation (incluant TV)
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            let detectedOS = 'other';
+
+            // Détection des TV
+            const isTv = /Android TV|SmartTV|Apple TV|Tizen|webOS|Roku|Xbox|PlayStation/i.test(userAgent);
+            // Mais aussi pour les boîtiers Android TV, on peut détecter "Android" et vérifier la présence de "TV"
+            const isAndroidTv = /Android/i.test(userAgent) && /TV/i.test(userAgent);
+            const isAppleTv = /AppleTV/i.test(userAgent);
+
+            if (isTv || isAndroidTv || isAppleTv) {
+                detectedOS = 'tv';
+            } else if (/android/i.test(userAgent)) {
+                detectedOS = 'android';
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                detectedOS = 'ios';
+            } else if (/Win/i.test(userAgent)) {
+                detectedOS = 'windows';
+            } else if (/Mac/i.test(userAgent)) {
+                detectedOS = 'mac';
+            } else if (/Linux/i.test(userAgent) && !/android/i.test(userAgent)) {
+                detectedOS = 'linux';
+            }
+
+            // 2. Mapping des liens et textes pour le bouton dynamique
+            const osMap = {
+                android: {
+                    link: 'https://github.com/KaiZen1404/StreamCODE/releases/download/v1.0/app-release.apk',
+                    text: 'Télécharger pour Android (APK)',
+                    icon: 'fab fa-android'
+                },
+                ios: {
+                    link: 'https://github.com/KaiZen1404/StreamCODE',
+                    text: 'Voir le projet iOS (à venir)',
+                    icon: 'fab fa-apple'
+                },
+                windows: {
+                    link: 'https://github.com/KaiZen1404/StreamCODE/releases',
+                    text: 'Voir les versions Windows',
+                    icon: 'fab fa-windows'
+                },
+                mac: {
+                    link: 'https://github.com/KaiZen1404/StreamCODE/releases',
+                    text: 'Voir les versions macOS',
+                    icon: 'fab fa-apple'
+                },
+                linux: {
+                    link: 'https://github.com/KaiZen1404/StreamCODE/releases',
+                    text: 'Voir les versions Linux',
+                    icon: 'fab fa-linux'
+                },
+                tv: {
+                    link: 'https://github.com/KaiZen1404/StreamCODE/releases',
+                    text: 'Voir les versions pour TV',
+                    icon: 'fas fa-tv'
+                },
+                other: {
+                    link: 'https://github.com/KaiZen1404/StreamCODE/releases',
+                    text: 'Voir toutes les versions',
+                    icon: 'fas fa-download'
+                }
+            };
+
+            // 3. Mise à jour du bouton principal
+            const dynamicBtn = document.getElementById('dynamicDownloadBtn');
+            const dynamicText = document.getElementById('dynamicBtnText');
+            const osInfo = osMap[detectedOS] || osMap.other;
+
+            if (dynamicBtn) {
+                dynamicBtn.href = osInfo.link;
+                const iconElement = dynamicBtn.querySelector('i');
+                if (iconElement) {
+                    iconElement.className = osInfo.icon;
+                }
+                dynamicText.textContent = osInfo.text;
+            }
+
+            // 4. Ajout du badge "Recommandé" sur la carte détectée
+            const cards = document.querySelectorAll('.platform-card');
+            cards.forEach(card => {
+                const osAttr = card.getAttribute('data-os');
+                card.classList.remove('recommended');
+                if (osAttr === detectedOS) {
+                    card.classList.add('recommended');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
